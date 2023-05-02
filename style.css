@@ -30,7 +30,9 @@ body {
 	min-height: 100vh;
 
 	margin: 0;
-	padding: 0 1.5rem;
+	padding: 1.5rem;
+
+	box-sizing: border-box;
 
 	background-color: var(--clr-very-dark-blue-main-BG);
 	color: var(--clr-white);
@@ -61,11 +63,14 @@ img {
 }
 
 main {
+	max-width: 15rem;
+
 	padding: 1.5rem;
 
 	border-radius: 1rem;
 
 	background-color: var(--clr-very-dark-blue-card-BG);
+	box-shadow: 0 0 5rem rgba(0, 0, 0, 0.5);
 }
 
 .details {
