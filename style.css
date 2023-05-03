@@ -56,6 +56,11 @@ img {
 	opacity: 0.6;
 }
 
+.brightened:hover {
+	color: var(--clr-cyan);
+	cursor: pointer;
+}
+
 .wrap {
 	display: flex;
 	align-items: center;
@@ -63,11 +68,13 @@ img {
 }
 
 main {
+	--radius-curve: 1rem;
+
 	max-width: 15rem;
 
 	padding: 1.5rem;
 
-	border-radius: 1rem;
+	border-radius: var(--radius-curve);
 
 	background-color: var(--clr-very-dark-blue-card-BG);
 	box-shadow: 0 0 5rem rgba(0, 0, 0, 0.5);
@@ -106,7 +113,32 @@ main {
 }
 
 .nft-img {
-	border-radius: 1rem;
+	border-radius: var(--radius-curve);
+	box-sizing: border-box;
+}
+.img-hov {
+	position: relative;
+}
+.img-hov:hover::before {
+	content: url("./images/icon-view.svg");
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	position: absolute;
+
+	left: 0;
+	top: 0;
+
+	width: 100%;
+	height: 98.1%;
+
+	border-radius: var(--radius-curve);
+
+	background-color: hsla(178, 100%, 50%, 0.5);
+
+	cursor: pointer;
 }
 
 .avatar-img {
